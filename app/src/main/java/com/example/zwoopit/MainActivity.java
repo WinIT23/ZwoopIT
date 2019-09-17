@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     progressDialog.dismiss();
                     Toast.makeText(MainActivity.this,"Logged in successfully",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this,drawer.class));
+                    startActivity(new Intent(MainActivity.this,home.class));
                 }
                 else
                 {
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         if(user != null)
         {
             finish();
-            startActivity(new Intent(MainActivity.this,drawer.class));
+            startActivity(new Intent(MainActivity.this,home.class));
         }
 
         login.setOnClickListener(new View.OnClickListener() {
