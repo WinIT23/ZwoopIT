@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "382784719245",
+    "firebase_url": "https://zwoopit-d0edc.firebaseio.com",
+    "project_id": "zwoopit-d0edc",
+    "storage_bucket": "zwoopit-d0edc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382784719245:android:17a38e383b1e4d25f715c4",
+        "android_client_info": {
+          "package_name": "com.example.zwoopit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382784719245-oi15su8q6sv336icv4fdugva08ddj0dm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zwoopit",
+            "certificate_hash": "9ccbef1a3ac988a4c74b45384967f47ee2c61633"
+          }
+        },
+        {
+          "client_id": "382784719245-t8ptr54g1an3b9b4vegtsvjda1mtc5g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm9j9dmHuUb0ZT5uLvlGwcgT3l7GXLF_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382784719245-t8ptr54g1an3b9b4vegtsvjda1mtc5g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
