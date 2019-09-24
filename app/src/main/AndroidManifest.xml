@@ -11,7 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".home"></activity>
+        <activity android:name=".showBook"></activity>
+        <activity android:name=".addBook" />
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".drawer"
             android:label="@string/title_activity_drawer"
