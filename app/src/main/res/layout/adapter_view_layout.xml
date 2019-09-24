@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+
+    <ImageView
+        android:id="@+id/BookImage"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/myfont"
+            android:text="BOOK NAME"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/view_bookname"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/myfont"
+            android:text="AUTHOR NAME"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/view_authorname"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/myfont"
+            android:text="EDITION"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/view_edition"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/myfont"
+            android:text="PUBLICATION"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/view_publication"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/myfont"
+            android:text="DISCOUNT"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/view_discount"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/myfont"
+            android:text="PRICE"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/view_price"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
