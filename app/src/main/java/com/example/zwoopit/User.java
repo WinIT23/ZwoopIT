@@ -6,57 +6,37 @@ import java.util.List;
 public class User {
     String userID;
     String mobNum;
-    String EMAIL;
-    String FNAME;
-    String LNAME;
-    ArrayList<String> addedBooks;
-    ArrayList<String> wishlistedBooks;
-    ArrayList<String> purchasedBooks;
+    String email;
+    String fname;
+    String lname;
 
     public User() {
     }
 
-    public User(String EMAIL, String FNAME, String LNAME) {
-        this.EMAIL = EMAIL;
-        this.FNAME = FNAME;
-        this.LNAME = LNAME;
-        addedBooks = null;
-        wishlistedBooks = null;
-        purchasedBooks = null;
+    public User(String email, String fname, String lname) {
+        this.email = email;
+        this.fname = fname;
+        this.lname = lname;
     }
 
-    public User(String EMAIL, String FNAME, String LNAME, ArrayList<String> addedBooks) {
-        this.EMAIL = EMAIL;
-        this.FNAME = FNAME;
-        this.LNAME = LNAME;
-        this.addedBooks = addedBooks;
+    public String getUserID() {
+        return userID;
     }
 
-    public User(String EMAIL, String FNAME, String LNAME, ArrayList<String> addedBooks, ArrayList<String> wishlistedBooks) {
-        this.EMAIL = EMAIL;
-        this.FNAME = FNAME;
-        this.LNAME = LNAME;
-        this.addedBooks = addedBooks;
-        this.wishlistedBooks = wishlistedBooks;
+    public String getMobNum() {
+        return mobNum;
     }
 
-    public User(String EMAIL, String FNAME, String LNAME, ArrayList<String> addedBooks, ArrayList<String> wishlistedBooks, ArrayList<String> purchasedBooks) {
-        this.EMAIL = EMAIL;
-        this.FNAME = FNAME;
-        this.LNAME = LNAME;
-        this.addedBooks = addedBooks;
-        this.wishlistedBooks = wishlistedBooks;
-        this.purchasedBooks = purchasedBooks;
+    public String getEmail() {
+        return email;
     }
 
-    public User(String userID, String EMAIL, String FNAME, String LNAME, ArrayList<String> addedBooks, ArrayList<String> wishlistedBooks, ArrayList<String> purchasedBooks) {
-        this.userID = userID;
-        this.EMAIL = EMAIL;
-        this.FNAME = FNAME;
-        this.LNAME = LNAME;
-        this.addedBooks = addedBooks;
-        this.wishlistedBooks = wishlistedBooks;
-        this.purchasedBooks = purchasedBooks;
+    public String getFname() {
+        return fname;
+    }
+
+    public String getLname() {
+        return lname;
     }
 
     public void setUserID(String userID) {
@@ -67,36 +47,16 @@ public class User {
         this.mobNum = mobNum;
     }
 
-    public String getEMAIL() {
-        return EMAIL;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getFNAME() {
-        return FNAME;
+    public void setFname(String fname) {
+        this.fname = fname;
     }
 
-    public String getLNAME() {
-        return LNAME;
-    }
-
-    public List<String> getAddedBooks() {
-        return addedBooks;
-    }
-
-    public List<String> getWishlistedBooks() {
-        return wishlistedBooks;
-    }
-
-    public List<String> getPurchasedBooks() {
-        return purchasedBooks;
-    }
-
-    public String getUserID() {
-        return userID;
-    }
-
-    public String getMobNum() {
-        return mobNum;
+    public void setLname(String lname) {
+        this.lname = lname;
     }
 }
 

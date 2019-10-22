@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -72,14 +73,10 @@ public class signupActivity extends AppCompatActivity {
                                 String mobNum = mobileNum.getText().toString().trim();
 
 
-                                ArrayList<String> myBooks = new ArrayList<>();
-                                myBooks.add("Harry Potter 1");
-                                myBooks.add("Harry Potter 2");
-
                                 String id = dbUser.push().getKey();
                                 ownerID = firebaseAuth.getUid();
 
-                                User user = new User(EMAIL,fname,lname,myBooks);
+                                User user = new User(EMAIL,fname,lname);
                                 user.setUserID(ownerID);
                                 user.setMobNum(mobNum);
 

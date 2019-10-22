@@ -10,6 +10,7 @@ public class Book {
     String ownerID;
     String publication;
     String discount="0";
+    String imageuri;
 
     public Book() {
     }
@@ -112,5 +113,13 @@ public class Book {
 
     public void setOwnerID(String ownerID) {
         this.ownerID = ownerID;
+    }
+
+    public String getImageuri() {
+        return imageuri;
+    }
+
+    public void setImageuri(String imageuri) {
+        this.imageuri = imageuri;
     }
 }

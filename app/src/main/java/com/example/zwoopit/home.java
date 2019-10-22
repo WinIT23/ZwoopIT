@@ -3,7 +3,6 @@ package com.example.zwoopit;
 import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 
 
@@ -22,8 +21,6 @@ import android.widget.Button;
 
 
 public class home extends AppCompatActivity {
-
-    Button addBook;
     private AppBarConfiguration mAppBarConfiguration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,22 +29,14 @@ public class home extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        addBook = findViewById(R.id.addBook);
-        addBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(home.this,addBook.class));
-            }
-        });
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         //.setAction("Action", null).show();
-                //startActivity(new Intent(home.this,addBook.class));
-                startActivity(new Intent(home.this,showBook.class));
+                startActivity(new Intent(home.this,addBook.class));
+                //startActivity(new Intent(home.this,showBook.class));
 
             }
         });

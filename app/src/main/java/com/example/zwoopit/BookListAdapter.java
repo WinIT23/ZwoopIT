@@ -1,15 +1,12 @@
 package com.example.zwoopit;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 
 public class BookListAdapter extends ArrayAdapter<Book> {
@@ -32,7 +29,7 @@ public class BookListAdapter extends ArrayAdapter<Book> {
         String publication = getItem(position).getPublication().toUpperCase();
         String discount = getItem(position).getDiscount();
         String price = getItem(position).getPrice();
-
+        String category = getItem(position).getCategory().toUpperCase();
 
         if(discount.equals(0))
         {
@@ -40,13 +37,14 @@ public class BookListAdapter extends ArrayAdapter<Book> {
             cost = (1 - Double.parseDouble(discount) / 100) * Double.parseDouble(price);
             price += " => " + cost.toString();
         }
-        Book book= new Book();
+        final Book book= new Book();
         book.setBookName(name);
         book.setAuthorName(aName);
         book.setEdition(edition);
         book.setPublication(publication);
         book.setDiscount(discount);
         book.setPrice(price);
+        book.setCategory(category);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mRes,parent,false);
@@ -58,6 +56,8 @@ public class BookListAdapter extends ArrayAdapter<Book> {
         TextView tvPublication = convertView.findViewById(R.id.view_publication);
         TextView tvDiscount = convertView.findViewById(R.id.view_discount);
         TextView tvPrice = convertView.findViewById(R.id.view_price);
+        TextView tvcategory = convertView.findViewById(R.id.view_category);
+
 
         tvName.setText(name);
         tvAName.setText(aName);
@@ -65,6 +65,7 @@ public class BookListAdapter extends ArrayAdapter<Book> {
         tvPublication.setText(publication);
         tvDiscount.setText(discount);
         tvPrice.setText(price);
+        tvcategory.setText(category);
         return convertView;
 
     }
