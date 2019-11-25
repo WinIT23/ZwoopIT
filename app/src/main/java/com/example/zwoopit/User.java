@@ -9,6 +9,7 @@ public class User {
     String email;
     String fname;
     String lname;
+    String semester;
 
     public User() {
     }
@@ -39,6 +40,10 @@ public class User {
         return lname;
     }
 
+    public String getSemester() {
+        return semester;
+    }
+
     public void setUserID(String userID) {
         this.userID = userID;
     }
@@ -57,6 +62,10 @@ public class User {
 
     public void setLname(String lname) {
         this.lname = lname;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
     }
 }
 

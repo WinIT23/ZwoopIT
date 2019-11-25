@@ -2,15 +2,20 @@ package com.example.zwoopit;
 
 public class Book {
     String bookID;
+    String ownerID;
+
     String bookName;
     String authorName;
     String category;
+    String publication;
+
     String edition;
     String price;
-    String ownerID;
-    String publication;
     String discount="0";
+
     String imageuri;
+    String search;
+    String filter;
 
     public Book() {
     }
@@ -121,5 +126,21 @@ public class Book {
 
     public void setImageuri(String imageuri) {
         this.imageuri = imageuri;
+    }
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
+    }
+
+    public String getFilter() {
+        return filter;
+    }
+
+    public void setFilter(String filter) {
+        this.filter = filter;
     }
 }

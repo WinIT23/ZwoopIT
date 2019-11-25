@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,13 +19,12 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class signupActivity extends AppCompatActivity {
 
-    EditText firstName, lastName, emailID, password, password2, mobileNum;
+    EditText firstName, lastName, emailID, password, password2, mobileNum, Semester;
     Button signup;
     Boolean flag;
 
@@ -43,6 +41,7 @@ public class signupActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         signup = findViewById(R.id.signup);
         mobileNum = findViewById(R.id.mobNum);
+        Semester = findViewById(R.id.semester);
 
 
         signup.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +70,7 @@ public class signupActivity extends AppCompatActivity {
                                 String fname = firstName.getText().toString().trim();
                                 String lname = lastName.getText().toString().trim();
                                 String mobNum = mobileNum.getText().toString().trim();
+                                String Sem = Semester.getText().toString().trim();
 
 
                                 String id = dbUser.push().getKey();
@@ -79,6 +79,7 @@ public class signupActivity extends AppCompatActivity {
                                 User user = new User(EMAIL,fname,lname);
                                 user.setUserID(ownerID);
                                 user.setMobNum(mobNum);
+                                user.setSemester(Sem);
 
                                 dbUser.child(id).setValue(user);
 
@@ -87,6 +88,7 @@ public class signupActivity extends AppCompatActivity {
                                 startActivity(new Intent(signupActivity.this, MainActivity.class));
                             }
                             else if(task.getException() instanceof FirebaseAuthUserCollisionException){
+                                progressDialog.dismiss();
                                 Toast.makeText(signupActivity.this, "User with this email already exist.", Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -105,9 +107,10 @@ public class signupActivity extends AppCompatActivity {
         String email = emailID.getText().toString();
         String pass = password.getText().toString();
         String mobno = mobileNum.getText().toString();
+        String sem = Semester.getText().toString();
 
         Boolean flag = false;
-        if (fName.isEmpty() || lName.isEmpty() || pass2.isEmpty() || email.isEmpty() || pass.isEmpty())
+        if (fName.isEmpty() || lName.isEmpty() || pass2.isEmpty() || email.isEmpty() || pass.isEmpty() || sem.isEmpty())
         {
             Toast.makeText(signupActivity.this, "Please Enter all the Details!", Toast.LENGTH_SHORT).show();
         }

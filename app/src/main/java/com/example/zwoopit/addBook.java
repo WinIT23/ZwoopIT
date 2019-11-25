@@ -174,6 +174,13 @@ public class addBook extends AppCompatActivity {
                     else{
                         Toast.makeText(addBook.this,"No file selected",Toast.LENGTH_SHORT).show();
                     }
+
+
+                    String search = BookName + "_" + AuthorName + "_" + Category + "_" + Publication;
+                    book.setSearch(search);
+                    String filter = Edition + "_" + Price + "_" + book.getDiscount();
+                    book.setFilter(filter);
+
                     dbref.child(ID).setValue(book);
                     Toast.makeText(addBook.this, "BOOK ADDED TO APPLICATION...", Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();

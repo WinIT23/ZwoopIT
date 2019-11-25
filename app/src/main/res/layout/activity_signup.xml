@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921"
+        app:layout_constraintVertical_bias="0.984"
         app:srcCompat="@drawable/logo" />
 
     <EditText
@@ -66,10 +66,10 @@
         android:textCursorDrawable="@null"
         app:layout_constraintBottom_toTopOf="@+id/emailID"
         app:layout_constraintEnd_toStartOf="@+id/lastName"
-        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
+        app:layout_constraintVertical_bias="0.585" />
 
     <EditText
         android:id="@+id/emailID"
@@ -94,7 +94,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintVertical_bias="0.441" />
 
     <EditText
         android:id="@+id/password"
@@ -105,19 +105,19 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:textCursorDrawable="@null"
         android:fontFamily="@font/myfont"
         android:hint="PASSWORD"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/background_light"
+        android:textCursorDrawable="@null"
         app:layout_constraintBottom_toTopOf="@+id/signup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
+        app:layout_constraintVertical_bias="0.786" />
 
     <EditText
         android:id="@+id/password2"
@@ -165,7 +165,7 @@
         app:layout_constraintHorizontal_bias="0.839"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
+        app:layout_constraintVertical_bias="0.585" />
 
     <EditText
         android:id="@+id/mobNum"
@@ -187,7 +187,31 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailID" />
+        app:layout_constraintTop_toBottomOf="@+id/emailID"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/semester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="86dp"
+        android:ems="10"
+        android:fontFamily="@font/myfont"
+        android:hint="SEMESTER"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobNum" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

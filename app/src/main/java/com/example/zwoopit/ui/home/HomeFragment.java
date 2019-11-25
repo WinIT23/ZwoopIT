@@ -35,6 +35,7 @@ public class HomeFragment extends Fragment {
     DatabaseReference databaseReference;
     ArrayList<Book> list;
     Book book;
+    public static int where = 0;
     public static Book showBook;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -79,6 +80,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 showBook = list.get(i);
+                where = 0;
                 startActivity(new Intent(getContext(), BookShowActivity.class));
             }
         });
