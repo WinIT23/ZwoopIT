@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4d524e"
+    android:padding="10dp"
+    tools:context=".filterActivity">
+
+    <SeekBar
+        android:id="@+id/price_seekBar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/selPrice"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:hint="Price"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_seekBar" />
+
+    <EditText
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:fontFamily="@font/myfont"
+        android:paddingTop="12dp"
+        android:text="Upto Price:"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/selPrice"
+        app:layout_constraintTop_toBottomOf="@+id/price_seekBar" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/semester"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginRight="117dp"
+        android:entries="@array/sem_names"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selPrice" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/discount"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginRight="117dp"
+        android:entries="@array/discount_range"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/semester" />
+
+    <Button
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginRight="175dp"
+        android:background="@drawable/btnmy"
+        android:fontFamily="@font/myfont"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discount" />
+
+
+    <ListView
+        android:id="@+id/listviewfilter"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
