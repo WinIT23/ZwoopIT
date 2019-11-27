@@ -12,10 +12,9 @@ public class Book {
     String edition;
     String price;
     String discount="0";
+    String sem;
 
     String imageuri;
-    String search;
-    String filter;
 
     public Book() {
     }
@@ -128,19 +127,12 @@ public class Book {
         this.imageuri = imageuri;
     }
 
-    public String getSearch() {
-        return search;
+
+    public String getSem() {
+        return sem;
     }
 
-    public void setSearch(String search) {
-        this.search = search;
-    }
-
-    public String getFilter() {
-        return filter;
-    }
-
-    public void setFilter(String filter) {
-        this.filter = filter;
+    public void setSem(String sem) {
+        this.sem = sem;
     }
 }

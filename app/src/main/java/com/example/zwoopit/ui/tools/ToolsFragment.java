@@ -1,9 +1,11 @@
 package com.example.zwoopit.ui.tools;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,8 +18,11 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.zwoopit.Book;
 import com.example.zwoopit.BookListAdapter;
+import com.example.zwoopit.BookShowActivity;
 import com.example.zwoopit.Cart;
 import com.example.zwoopit.R;
+import com.example.zwoopit.ui.home.HomeFragment;
+import com.example.zwoopit.updateBookActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -34,6 +39,8 @@ public class ToolsFragment extends Fragment {
     ListView listViewCartBooks;
     DatabaseReference databaseReference;
     ArrayList<Book> cartBooksList;
+    public static Book publicBook;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -76,6 +83,21 @@ public class ToolsFragment extends Fragment {
             }
         });
 
+        listViewCartBooks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                publicBook = cartBooksList.get(i);
+                HomeFragment.where = 4;
+                updateBookActivity.book = publicBook;
+                startActivity(new Intent(getContext(), BookShowActivity.class));
+            }
+        });
+
         return root;
     }
+    public static Book getBook()
+    {
+        return publicBook;
+    }
+
 }

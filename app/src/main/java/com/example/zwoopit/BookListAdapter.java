@@ -31,12 +31,6 @@ public class BookListAdapter extends ArrayAdapter<Book> {
         String price = getItem(position).getPrice();
         String category = getItem(position).getCategory().toUpperCase();
 
-        if(discount.equals(0))
-        {
-            Double cost;
-            cost = (1 - Double.parseDouble(discount) / 100) * Double.parseDouble(price);
-            price += " => " + cost.toString();
-        }
         final Book book= new Book();
         book.setBookName(name);
         book.setAuthorName(aName);
@@ -57,7 +51,6 @@ public class BookListAdapter extends ArrayAdapter<Book> {
         TextView tvDiscount = convertView.findViewById(R.id.view_discount);
         TextView tvPrice = convertView.findViewById(R.id.view_price);
         TextView tvcategory = convertView.findViewById(R.id.view_category);
-
 
         tvName.setText(name);
         tvAName.setText(aName);

@@ -21,13 +21,26 @@
     <string name="title_activity_home">home</string>
 
     <string-array name="sem_names">
-        <item>Semester 1</item>
-        <item>Semester 2</item>
-        <item>Semester 3</item>
-        <item>Semester 4</item>
-        <item>Semester 5</item>
-        <item>Semester 6</item>
-        <item>Semester 7</item>
-        <item>Semester 8</item>
+        <item>Choose Semester</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="discount_range">
+        <item>Choose Discount</item>
+        <item>more than 10%</item>
+        <item>more than 20%</item>
+        <item>more than 30%</item>
+        <item>more than 40%</item>
+        <item>more than 50%</item>
+        <item>more than 60%</item>
+        <item>more than 70%</item>
+        <item>more than 80%</item>
+        <item>more than 90%</item>
     </string-array>
 </resources>

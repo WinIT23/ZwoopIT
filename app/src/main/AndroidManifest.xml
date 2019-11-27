@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".filterActivity"></activity>
+        <activity android:name=".updateBookActivity"></activity>
+        <activity android:name=".filterActivity" />
         <activity android:name=".searchActivity" />
         <activity android:name=".BookShowActivity" />
         <activity android:name=".addBook" />

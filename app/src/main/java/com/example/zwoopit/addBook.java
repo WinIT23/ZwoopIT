@@ -38,6 +38,7 @@ public class addBook extends AppCompatActivity {
     EditText price;
     EditText publication;
     EditText imagename;
+    EditText et_booksem;
     Button chooseFile;
     Button addTheBook;
     ImageView imageView;
@@ -78,6 +79,7 @@ public class addBook extends AppCompatActivity {
         chooseFile = findViewById(R.id.mBimg);
         addTheBook = findViewById(R.id.add);
         imageView = findViewById(R.id.mImageView);
+        et_booksem = findViewById(R.id.booksem);
 
         final FirebaseAuth mAuth;
         mAuth = FirebaseAuth.getInstance();
@@ -110,11 +112,12 @@ public class addBook extends AppCompatActivity {
                 String Edition = edition.getText().toString().trim();
                 String Price = price.getText().toString().trim();
                 String Publication = publication.getText().toString().trim();
+                String Semester = et_booksem.getText().toString().trim();
 
 
                 boolean flag1=true;
                 boolean flag2=true;
-                if(BookName.isEmpty() || AuthorName.isEmpty() || Category.isEmpty() || Edition.isEmpty()) {
+                if(BookName.isEmpty() || AuthorName.isEmpty() || Category.isEmpty() || Edition.isEmpty() || Semester.isEmpty()) {
                     Toast.makeText(addBook.this,"Enter all the details!",Toast.LENGTH_SHORT).show();
                     flag1 = false;
                 }
@@ -135,7 +138,7 @@ public class addBook extends AppCompatActivity {
                     price.setText(null);
                     flag2=false;
                 }
-                if(flag1 && flag2) {
+                if(flag1 && flag2 && (Integer.parseInt(Semester) <= 8) && (Integer.parseInt(Semester) > 0) )  {
 
                     final ProgressDialog progressDialog = new ProgressDialog( addBook.this);
                     progressDialog.setMessage("Please Wait...Registration In Progress!");
@@ -176,11 +179,7 @@ public class addBook extends AppCompatActivity {
                     }
 
 
-                    String search = BookName + "_" + AuthorName + "_" + Category + "_" + Publication;
-                    book.setSearch(search);
-                    String filter = Edition + "_" + Price + "_" + book.getDiscount();
-                    book.setFilter(filter);
-
+                    book.setSem(et_booksem.getText().toString());
                     dbref.child(ID).setValue(book);
                     Toast.makeText(addBook.this, "BOOK ADDED TO APPLICATION...", Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();

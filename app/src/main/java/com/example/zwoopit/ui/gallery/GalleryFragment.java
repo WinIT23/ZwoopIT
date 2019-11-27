@@ -1,10 +1,12 @@
 package com.example.zwoopit.ui.gallery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +19,11 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.zwoopit.Book;
 import com.example.zwoopit.BookListAdapter;
+import com.example.zwoopit.BookShowActivity;
 import com.example.zwoopit.R;
+import com.example.zwoopit.filterActivity;
+import com.example.zwoopit.ui.home.HomeFragment;
+import com.example.zwoopit.updateBookActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -35,6 +41,7 @@ public class GalleryFragment extends Fragment {
     DatabaseReference databaseReference;
     ArrayList<Book> addedBooksList;
     Book book;
+    public static Book publicBook;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -75,6 +82,21 @@ public class GalleryFragment extends Fragment {
             }
         });
 
+        listViewAddedBooks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                publicBook = addedBooksList.get(i);
+                HomeFragment.where = 3;
+                updateBookActivity.book = publicBook;
+                startActivity(new Intent(getContext(), BookShowActivity.class));
+            }
+        });
         return root;
     }
+
+    public static Book getBook()
+    {
+        return publicBook;
+    }
+
 }
